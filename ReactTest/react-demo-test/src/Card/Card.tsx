@@ -1,31 +1,29 @@
 import React from 'react';
 import CardProps from './Card.type';
+import CardType from './Card';
 
 
-export const Card = ({
-    title, body, footer, buttonLabel, buttonAction }: CardProps) => {
-
-
+const Card = ({
+    title,
+    body,
+    footer,
+    buttonLabel,
+    buttonAction
+}: CardProps) => {
     return (
         <>
-            <div className="card-title">
-                {title}
-            </div>
-            <div className="card-body">
-                {body}
+            <div className='card-body'>{body}</div>
+            <div className='card-title'>
+                <h2>{title}</h2>
             </div>
             {
                 footer &&
-                <div className="card-footer">
-                    {footer}
-                </div>
+                <div className='card-footer'>{footer}</div>
             }
-
             {
                 buttonLabel &&
-                <button>{buttonLabel}</button>
+                <button onClick={buttonAction}>{buttonLabel}</button>
             }
-
         </>
     )
 }

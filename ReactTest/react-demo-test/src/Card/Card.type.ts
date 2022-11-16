@@ -1,9 +1,11 @@
+import { MouseEventHandler } from "react";
+
 type CardProps = {
     title: string;
     body: string;
     footer?: string;
     buttonLabel?: string;
-    buttonAction?: Function;
+    buttonAction?: MouseEventHandler;
 
 };
 
