@@ -1,6 +1,32 @@
-# image
+version: '3.3'
 
-FROM 
+services:
+  db:
+    build: ./mongo
+    container_name: db
+    networks:
+      - Vehicule
+  
+  locations:
+    build: ./mongo
+    container_name: locations
+    networks:
+      - Vehicule
+
+  locationsValide:
+    build: ./mongo
+    container_name: locationsValide
+    networks:
+      - Vehicule
+
+networks:
+  - Vehicule
+
+
+  
+
+
+
 
 
 
